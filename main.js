@@ -11,12 +11,12 @@ myElements.forEach(function(element) {
             element.innerHTML = 'X'
             // update the turn and title
             turn = 'o'
-            title.innerHTML = "Turn Of -> O"
+            title.innerHTML = "O"
         } else if (turn === 'o' && element.innerHTML === '') {
             element.innerHTML = 'O';
             // update the turn and title
             turn = 'x'; 
-            title.innerHTML = "Turn Of -> X"
+            title.innerHTML = "X"
         }
         // Winner Function Will Be Run Every Onclick On Each Element
         winner()
@@ -49,7 +49,10 @@ function winner () {
         myElements.forEach(function(element) {
             if (element.innerHTML === '') {
                 allSquaresFull = false;
-            }
+            } 
+            // when I'm onclick to element it run this code and check for every element if it is full or not
+            // if any element still empty so => allSquaresFull = false
+            // else allSquaresFull = true;
         });
         if (allSquaresFull) {
             title.innerHTML = "Game Over - All Squares Full"
