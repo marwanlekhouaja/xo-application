@@ -44,6 +44,19 @@ function winner () {
         end(0, 4, 8)
     } else if (squares[2] === squares[4] && squares[4] === squares[6] && squares[4] !== "") {
         end(2, 4, 6)
+    } else {
+        let allSquaresFull = true;
+        myElements.forEach(function(element) {
+            if (element.innerHTML === '') {
+                allSquaresFull = false;
+            }
+        });
+        if (allSquaresFull) {
+            title.innerHTML = "Game Over - All Squares Full"
+            setTimeout(function() {
+                location.reload()
+            }, 2000)
+        }
     }
 }
 
