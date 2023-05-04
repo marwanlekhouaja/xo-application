@@ -11,12 +11,12 @@ myElements.forEach(function(element) {
             element.innerHTML = 'X'
             // update the turn and title
             turn = 'o'
-            title.innerHTML = "O"
+            title.innerHTML = "Turn Of -> O"
         } else if (turn === 'o' && element.innerHTML === '') {
             element.innerHTML = 'O';
             // update the turn and title
             turn = 'x'; 
-            title.innerHTML = "X"
+            title.innerHTML = "Turn Of -> X"
         }
         // Winner Function Will Be Run Every Onclick On Each Element
         winner()
